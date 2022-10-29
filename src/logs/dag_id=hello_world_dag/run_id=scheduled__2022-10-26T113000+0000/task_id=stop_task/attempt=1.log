@@ -1,0 +1,24 @@
+[2022-10-26 11:45:06,482] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hello_world_dag.stop_task scheduled__2022-10-26T11:30:00+00:00 [queued]>
+[2022-10-26 11:45:06,490] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: hello_world_dag.stop_task scheduled__2022-10-26T11:30:00+00:00 [queued]>
+[2022-10-26 11:45:06,490] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 11:45:06,491] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-10-26 11:45:06,491] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 11:45:06,503] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): stop_task> on 2022-10-26 11:30:00+00:00
+[2022-10-26 11:45:06,505] {standard_task_runner.py:52} INFO - Started process 1838 to run task
+[2022-10-26 11:45:06,508] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'hello_world_dag', 'stop_task', 'scheduled__2022-10-26T11:30:00+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/hello.py', '--cfg-path', '/tmp/tmprv6efxtp', '--error-file', '/tmp/tmp1hw6_lmu']
+[2022-10-26 11:45:06,508] {standard_task_runner.py:80} INFO - Job 97: Subtask stop_task
+[2022-10-26 11:45:06,563] {task_command.py:369} INFO - Running <TaskInstance: hello_world_dag.stop_task scheduled__2022-10-26T11:30:00+00:00 [running]> on host cf01c04ee00d
+[2022-10-26 11:45:06,634] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=hello_world_dag
+AIRFLOW_CTX_TASK_ID=stop_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-26T11:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-10-26T11:30:00+00:00
+[2022-10-26 11:45:06,635] {hello.py:10} INFO - Hello World!!
+[2022-10-26 11:45:06,635] {python.py:173} INFO - Done. Returned value was: None
+[2022-10-26 11:45:06,649] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=hello_world_dag, task_id=stop_task, execution_date=20221026T113000, start_date=20221026T114506, end_date=20221026T114506
+[2022-10-26 11:45:06,681] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-26 11:45:06,715] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

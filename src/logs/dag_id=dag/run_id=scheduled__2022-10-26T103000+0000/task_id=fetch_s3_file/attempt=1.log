@@ -1,0 +1,34 @@
+[2022-10-26 10:50:31,518] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag.fetch_s3_file scheduled__2022-10-26T10:30:00+00:00 [queued]>
+[2022-10-26 10:50:31,525] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag.fetch_s3_file scheduled__2022-10-26T10:30:00+00:00 [queued]>
+[2022-10-26 10:50:31,526] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 10:50:31,526] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-10-26 10:50:31,527] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 10:50:31,539] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): fetch_s3_file> on 2022-10-26 10:30:00+00:00
+[2022-10-26 10:50:31,541] {standard_task_runner.py:52} INFO - Started process 758 to run task
+[2022-10-26 10:50:31,544] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dag', 'fetch_s3_file', 'scheduled__2022-10-26T10:30:00+00:00', '--job-id', '79', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp3stlsdg9', '--error-file', '/tmp/tmp6lublb4l']
+[2022-10-26 10:50:31,544] {standard_task_runner.py:80} INFO - Job 79: Subtask fetch_s3_file
+[2022-10-26 10:50:31,602] {task_command.py:369} INFO - Running <TaskInstance: dag.fetch_s3_file scheduled__2022-10-26T10:30:00+00:00 [running]> on host cf01c04ee00d
+[2022-10-26 10:50:31,672] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dag
+AIRFLOW_CTX_TASK_ID=fetch_s3_file
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-26T10:30:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-10-26T10:30:00+00:00
+[2022-10-26 10:50:31,673] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/airflow/decorators/base.py", line 179, in execute
+    return_value = super().execute(context)
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/usr/local/lib/python3.8/dist-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/lessons/dags/test.py", line 59, in fetch_s3_file
+    fetch_s3_file('data-bucket', 'group_log.csv')
+TypeError: 'XComArg' object is not callable
+[2022-10-26 10:50:31,689] {taskinstance.py:1395} INFO - Marking task as FAILED. dag_id=dag, task_id=fetch_s3_file, execution_date=20221026T103000, start_date=20221026T105031, end_date=20221026T105031
+[2022-10-26 10:50:31,700] {standard_task_runner.py:92} ERROR - Failed to execute job 79 for task fetch_s3_file ('XComArg' object is not callable; 758)
+[2022-10-26 10:50:31,716] {local_task_job.py:156} INFO - Task exited with return code 1
+[2022-10-26 10:50:31,758] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

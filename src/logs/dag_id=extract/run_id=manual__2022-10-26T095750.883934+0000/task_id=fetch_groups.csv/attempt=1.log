@@ -1,0 +1,23 @@
+[2022-10-26 09:57:52,898] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: extract.fetch_groups.csv manual__2022-10-26T09:57:50.883934+00:00 [queued]>
+[2022-10-26 09:57:52,907] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: extract.fetch_groups.csv manual__2022-10-26T09:57:50.883934+00:00 [queued]>
+[2022-10-26 09:57:52,907] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 09:57:52,907] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-10-26 09:57:52,908] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 09:57:52,920] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): fetch_groups.csv> on 2022-10-26 09:57:50.883934+00:00
+[2022-10-26 09:57:52,923] {standard_task_runner.py:52} INFO - Started process 1525 to run task
+[2022-10-26 09:57:52,925] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'extract', 'fetch_groups.csv', 'manual__2022-10-26T09:57:50.883934+00:00', '--job-id', '67', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmp468cc2b9', '--error-file', '/tmp/tmp425qne0l']
+[2022-10-26 09:57:52,926] {standard_task_runner.py:80} INFO - Job 67: Subtask fetch_groups.csv
+[2022-10-26 09:57:52,980] {task_command.py:369} INFO - Running <TaskInstance: extract.fetch_groups.csv manual__2022-10-26T09:57:50.883934+00:00 [running]> on host cf01c04ee00d
+[2022-10-26 09:57:53,054] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=extract
+AIRFLOW_CTX_TASK_ID=fetch_groups.csv
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-26T09:57:50.883934+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-26T09:57:50.883934+00:00
+[2022-10-26 09:57:56,146] {python.py:173} INFO - Done. Returned value was: None
+[2022-10-26 09:57:56,164] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=extract, task_id=fetch_groups.csv, execution_date=20221026T095750, start_date=20221026T095752, end_date=20221026T095756
+[2022-10-26 09:57:56,215] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-26 09:57:56,252] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

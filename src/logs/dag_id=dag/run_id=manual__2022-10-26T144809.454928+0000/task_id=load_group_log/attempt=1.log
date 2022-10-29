@@ -1,0 +1,23 @@
+[2022-10-26 14:48:17,188] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag.load_group_log manual__2022-10-26T14:48:09.454928+00:00 [queued]>
+[2022-10-26 14:48:17,197] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: dag.load_group_log manual__2022-10-26T14:48:09.454928+00:00 [queued]>
+[2022-10-26 14:48:17,197] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:48:17,197] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2022-10-26 14:48:17,198] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-10-26 14:48:17,210] {taskinstance.py:1377} INFO - Executing <Task(_PythonDecoratedOperator): load_group_log> on 2022-10-26 14:48:09.454928+00:00
+[2022-10-26 14:48:17,212] {standard_task_runner.py:52} INFO - Started process 5480 to run task
+[2022-10-26 14:48:17,215] {standard_task_runner.py:79} INFO - Running: ['airflow', 'tasks', 'run', 'dag', 'load_group_log', 'manual__2022-10-26T14:48:09.454928+00:00', '--job-id', '159', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmplcbr4e6k', '--error-file', '/tmp/tmpux74l634']
+[2022-10-26 14:48:17,216] {standard_task_runner.py:80} INFO - Job 159: Subtask load_group_log
+[2022-10-26 14:48:17,271] {task_command.py:369} INFO - Running <TaskInstance: dag.load_group_log manual__2022-10-26T14:48:09.454928+00:00 [running]> on host cf01c04ee00d
+[2022-10-26 14:48:17,340] {taskinstance.py:1569} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=dag
+AIRFLOW_CTX_TASK_ID=load_group_log
+AIRFLOW_CTX_EXECUTION_DATE=2022-10-26T14:48:09.454928+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-10-26T14:48:09.454928+00:00
+[2022-10-26 14:48:22,741] {python.py:173} INFO - Done. Returned value was: None
+[2022-10-26 14:48:22,755] {taskinstance.py:1395} INFO - Marking task as SUCCESS. dag_id=dag, task_id=load_group_log, execution_date=20221026T144809, start_date=20221026T144817, end_date=20221026T144822
+[2022-10-26 14:48:22,819] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-10-26 14:48:22,847] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

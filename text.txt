@@ -1,0 +1,9 @@
+Две основные папки dags и sql:
+	DAGS: один даг на скачивание csv-файла и загрузку в таблицу group_log в схеме DUROVVERYANDEXRU__STAGING;
+
+	sql:
+		Create table.sql: создание таблиц group_log, l_user_group_activity, s_auth_history
+
+		Insert into tables.sql: insert в таблицы l_user_group_activity, s_auth_history
+
+		Create tables.sql: cte таблицы user_group_messages, user_group_log и их совмещение.
